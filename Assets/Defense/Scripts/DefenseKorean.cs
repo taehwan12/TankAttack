@@ -1,0 +1,101 @@
+using System;
+
+namespace IronKeep
+{
+    // Translate display strings only. Internal button names and record keys stay stable.
+    public static class DefenseKorean
+    {
+        static readonly (string english,string korean)[] Phrases = {
+            ("IRON KEEP","철의 요새"),
+            ("LOADOUT LOBBY / PROTECT THE COMMAND CORE","출격 준비실 / 지휘 코어를 지키세요"),
+            ("01 / CHOOSE YOUR TANK","01 / 탱크 선택"),
+            ("02 / SELECT DIFFICULTY","02 / 난이도 선택"),
+            ("DEPLOY SELECTED TANK / ENTER","선택한 탱크로 출격 / Enter"),
+            ("RETURN TO LOADOUT LOBBY","탱크 선택 로비로 돌아가기"),
+            ("DEPLOY AGAIN  /  ENTER","같은 설정으로 재도전 / Enter"),
+            ("TACTICAL DEFENSE  /  OPERATION 01","기지 방어 작전 / 제1구역"),
+            ("SECTOR SECURED","방어 성공"),
+            ("DEFENSE FAILED","방어 실패"),
+            ("AFTER-ACTION REPORT","전투 결과"),
+            ("All hostile waves have been eliminated.","모든 적의 공격을 막아냈습니다."),
+            ("The command core was destroyed.","지휘 코어가 파괴되었습니다."),
+            ("Your tank was destroyed.","플레이어 탱크가 파괴되었습니다."),
+            ("THE CORE STANDS.\nTHE SECTOR IS SAFE.","코어를 지켜냈습니다.\n이 구역은 이제 안전합니다."),
+            ("REGROUP. REARM.\nRETURN TO THE FRONT.","전열을 정비하고\n다시 전장에 도전하세요."),
+            ("WAVES REACHED","도달 웨이브"),
+            ("HOSTILES ELIMINATED","격파한 적"),
+            ("MISSION TIME","전투 시간"),
+            ("BEST CLEAR","최고 클리어 기록"),
+            ("5 WAVES / 4 ENEMY CLASSES / COLLECT SHELL UPGRADES","5웨이브 / 적 전차 4종 / 포탄 강화 아이템 획득"),
+            ("WASD move / MOUSE aim + fire / Q,E or WHEEL barrel\n1,2 ammo / R core repair / ESC pause\nDrops: AREA damage / RAPID FIRE / SHELL DAMAGE","WASD 이동 / 마우스 조준·왼쪽 버튼 발사\nQ·E·휠 포신 조절 / 1·2 탄종 / R 기지 수리 / Esc 일시정지\n처치 보상: 범위 피해 / 공격 속도 / 포탄 피해량 강화"),
+            ("BALANCED / dependable armor and firepower","균형형 / 안정적인 장갑과 화력"),
+            ("No exceptional speed or burst damage","이동 속도와 순간 화력은 특화 탱크보다 낮음"),
+            ("SCOUT / fastest movement and rapid fire","정찰형 / 가장 빠른 이동과 연속 사격"),
+            ("Light armor and lower damage per shell","체력이 낮고 포탄 한 발의 피해량이 작음"),
+            ("HEAVY / strongest armor and shell damage","중장갑형 / 가장 높은 체력과 발당 피해"),
+            ("Slow movement and long reload","이동·회전이 느리고 재장전 시간이 김"),
+            ("WEAKNESS / ","약점 / "),
+            ("Fewer enemies / low incoming damage / stronger core","적 수와 공격력이 낮고 기지가 튼튼합니다"),
+            ("Recommended / gentler than the original mission","권장 난이도 / 이전 버전보다 부담을 낮췄습니다"),
+            ("More enemies / full enemy strength / limited repairs","많은 적과 강한 공격 / 수리 비용이 높습니다"),
+            ("enemies total / core","대의 적 / 기지 체력"),
+            ("credits","크레딧"),
+            (" / repair "," / 수리 비용 "),
+            (" HP",""),
+            ("OPERATIONS PAUSED","작전 일시정지"),
+            ("RESUME  /  ESC","계속하기 / Esc"),
+            ("RESTART MISSION","현재 설정으로 다시 시작"),
+            ("TANK ARMOR","탱크 체력"),
+            ("CORE ARMOR REMAINING","기지 잔여 체력"),
+            ("CORE ARMOR","기지 체력"),
+            ("SHELL DAMAGE","포탄 피해량"),
+            ("ARMOR","체력"),
+            ("SPEED","이동 속도"),
+            ("RELOAD","재장전"),
+            ("INBOUND IN","적 도착까지"),
+            ("HOSTILES","남은 적"),
+            ("KILLS","격파"),
+            ("WAVE","웨이브"),
+            ("CREDITS","크레딧"),
+            ("R / REPAIR","R / 기지 수리"),
+            ("1 / ARMOR-PIERCING","1 / 철갑탄"),
+            ("2 / HIGH-EXPLOSIVE","2 / 고폭탄"),
+            ("ELEVATION","포신 각도"),
+            ("RELOADING","재장전 중"),
+            ("READY","발사 준비 완료"),
+            ("RUN UPGRADES","이번 전투 강화"),
+            ("UPGRADES","획득 강화"),
+            ("FIRE RATE","공격 속도"),
+            ("RADIUS","폭발 반경"),
+            ("AREA","범위"),
+            ("RATE","공속"),
+            ("DMG","피해"),
+            ("DAMAGE","피해량"),
+            ("WASD MOVE / 1,2 AMMO / ESC PAUSE","WASD 이동 / 1·2 탄종 / Esc 일시정지"),
+            ("DEFEND THE COMMAND CORE","지휘 코어를 지키세요"),
+            ("SECTOR CLEAR  /  REPAIR & REARM","웨이브 종료 / 수리하고 다음 공격을 준비하세요"),
+            ("HOSTILES INBOUND","적이 진입하고 있습니다"),
+            ("MOVE CLOSER TO THE CORE TO REPAIR","수리하려면 기지 가까이 이동하세요"),
+            ("REPAIR REQUIRES","기지 수리 비용:"),
+            ("CORE ARMOR IS ALREADY FULL","기지 체력이 이미 가득 찼습니다"),
+            ("CORE REPAIRED  /  +100 ARMOR","기지 수리 완료 / 체력 +100"),
+            ("REPAIR KIT  /  +45 ARMOR","수리 키트 획득 / 탱크 체력 +45"),
+            ("AREA SHELLS","범위 포탄 강화"),
+            ("RAPID FIRE","공격 속도 강화"),
+            ("LEVEL","단계"),
+            ("THIS RUN","이번 전투 동안 유지"),
+            ("TANK","탱크"),
+            ("CORE","기지"),
+            ("EASY","쉬움"),
+            ("NORMAL","보통"),
+            ("HARD","어려움")
+        };
+        static DefenseKorean() { Array.Sort(Phrases,(a,b)=>b.english.Length.CompareTo(a.english.Length)); }
+        public static string Translate(string value)
+        {
+            if(string.IsNullOrEmpty(value))return value;
+            foreach(var phrase in Phrases)value=value.Replace(phrase.english,phrase.korean);
+            return System.Text.RegularExpressions.Regex.Replace(value,@"(?<=\d)s\b","초");
+        }
+    }
+}
